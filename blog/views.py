@@ -34,3 +34,24 @@ def post_delete(request,post_id):
     POST=Post.objects.get(id=post_id)
     POST.delete()
     return redirect('/blog')  
+
+
+##cbv
+from django.views.generic  import ListView ,DetailView, CreateView,UpdateView,DeleteView
+
+
+class post_lists(ListView):
+    model=Post
+class detaillist(DetailView):
+    pass
+
+class newlist(CreateView):
+    pass
+
+class editist(UpdateView):
+    pass
+
+
+class deletelist(DeleteView):
+    pass
+

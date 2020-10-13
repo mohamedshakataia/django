@@ -29,8 +29,6 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
-
-    
     def get_absolute_url(self):
         return reverse("blog:blog_detial",kwargs={"post_id":self.id})
 
