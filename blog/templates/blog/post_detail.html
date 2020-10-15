@@ -3,11 +3,11 @@
 
 
 
-<a href="{{single_post.editposts}}">EDITPOST</a>
+<a href="{% url 'blog:edit' post.id %}">EDITPOST</a>
 <hr>
 
 
-<h4>{{single_post}}</h4>
+<h4>{{post}}</h4>
 
 <hr>
 <a href="{{single_post.deletesposts}}">DELETE POST</a>

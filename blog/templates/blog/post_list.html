@@ -1,0 +1,11 @@
+<h2>welcome list_post page</h2>
+<hr>
+<h4><a href="{% url 'blog:New'%}">NEWPOST</a></h4>
+
+<hr>
+
+ 
+{% for post in object_list %}
+   <h4><a href="{% url 'blog:detail' post.id %}">{{post}}</a></h4> 
+{% endfor %}
+

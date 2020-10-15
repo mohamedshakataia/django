@@ -16,11 +16,7 @@ urlpatterns=[
     path('cbv/<int:pk>/detail/',views.detaillist.as_view(),name='detail'),
     path('cbv/new/',views.newlist.as_view(),name='New'),
     path('cbv/<int:pk>/edit/',views.editist.as_view(),name='edit'),
-    path('cbv/<int:pk>/delete/',views.deletelist.as_view(),name='delete'),
     
-
-
-
     
 
     

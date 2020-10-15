@@ -29,11 +29,13 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+
+    
     def get_absolute_url(self):
-        return reverse("blog:blog_detial",kwargs={"post_id":self.id})
+        return reverse("blog:detail",kwargs={"post_id":self.id})
 
     def editposts(self):
-        return reverse("blog:editpost",kwargs={"post_id":self.id})
+        return reverse("blog:edit",kwargs={"post_id":self.id})
 
     def deletesposts(self):
         return reverse("blog:deletepost",kwargs={"post_id":self.id})

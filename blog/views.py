@@ -37,21 +37,21 @@ def post_delete(request,post_id):
 
 
 ##cbv
-from django.views.generic  import ListView ,DetailView, CreateView,UpdateView,DeleteView
+from django.views.generic  import ListView ,DetailView, CreateView,UpdateView
 
 
 class post_lists(ListView):
     model=Post
 class detaillist(DetailView):
-    pass
+    model=Post
 
 class newlist(CreateView):
-    pass
+    model = Post
+    fields='__all__'
+    success_url='/blog/cbv'
 
 class editist(UpdateView):
-    pass
-
-
-class deletelist(DeleteView):
-    pass
+    model = Post
+    fields='__all__'
+    success_url='/blog/cbv'
 
